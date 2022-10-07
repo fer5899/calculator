@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./gridPositions.css">
     <script src="./events.js" defer></script>
     <script src="./functions.js" defer></script>
     <meta charset="UTF-8">
@@ -19,47 +20,31 @@
         </div>
 
         <div id="keys">
-            <div id="numpad">
-                <div class="numpad-row">
-                    <button id="key-7">7</button>
-                    <button id="key-8">8</button>
-                    <button id="key-9">9</button>
-                </div>
-                <div class="numpad-row">
-                    <button id="key-4">4</button>
-                    <button id="key-5">5</button>
-                    <button id="key-6">6</button>
-                </div>
-                <div class="numpad-row">
-                    <button id="key-1">1</button>
-                    <button id="key-2">2</button>
-                    <button id="key-3">3</button>
-                </div>
-                <div class="numpad-row">
-                    <button id="key-neg">+/-</button>
-                    <button id="key-0">0</button>
-                    <button id="key-dot">.</button>
-                </div>
+            <div id="numpad" class="grid-container">
+                <button id="key-7" class="grid-item">7</button>
+                <button id="key-8" class="grid-item">8</button>
+                <button id="key-9" class="grid-item">9</button>
+                <button id="key-4" class="grid-item">4</button>
+                <button id="key-5" class="grid-item">5</button>
+                <button id="key-6" class="grid-item">6</button>
+                <button id="key-1" class="grid-item">1</button>
+                <button id="key-2" class="grid-item">2</button>
+                <button id="key-3" class="grid-item">3</button>
+                <button id="key-neg" class="grid-item">+/-</button>
+                <button id="key-0" class="grid-item">0</button>
+                <button id="key-dot" class="grid-item">.</button>
             </div>
 
-            <div id="operators">
-                <div class="operator-row">
-                    <button id="key-ac">AC</button>
-                    <button id="key-del">DEL</button>
-                </div>
-                <div class="operator-row">
-                    <button id="key-sqrt">sqrt()</button>
-                    <button id="key-pow">pow()</button>
-                </div>
-                <div class="operator-row">
-                    <button id="key-div">/</button>
-                    <button id="key-mult">x</button>
-                </div>
-                <div class="operator-row">
-                    <button id="key-subs">-</button>
-                    <button id="key-sum">+</button>
-                </div>
-                <button id="key-equal" class="operator-row">=</button>
+            <div id="operators" class="grid-container">
+                <button id="key-ac" class="grid-item">AC</button>
+                <button id="key-del" class="grid-item">DEL</button>
+                <button id="key-sqrt" class="grid-item">sqrt()</button>
+                <button id="key-pow" class="grid-item">pow()</button>
+                <button id="key-div" class="grid-item">/</button>
+                <button id="key-mult" class="grid-item">x</button>
+                <button id="key-subs" class="grid-item">-</button>
+                <button id="key-sum" class="grid-item">+</button>
+                <button id="key-equal" class="grid-item">=</button>
             </div>
         </div>
     </div>
