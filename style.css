@@ -8,25 +8,75 @@ body {
 
 div {
     display: flex;
-    border: 1px dotted black; /* for positioning */
+    /* border: 1px dotted black;  *//* for positioning */
+    border-radius: 4px;
 }
 
 button {
-    display: block;
+    border: 2px solid rgb(46, 46, 46);
+    border-radius: 4px;
+    background-color: rgb(233, 240, 247);
+    font-size: 20px;
+}
+
+#operators button {
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: rgb(202, 214, 226);
+}
+
+button:active {
+    background-color: rgb(170, 180, 190);
+}
+
+#key-ac, #key-del {
+    background-color: orangered;
+    color: white;
+}
+
+#key-ac:hover, #key-del:hover {
+    background-color: rgb(224, 60, 0);
+}
+
+#key-ac:active, #key-del:active {
+    background-color: rgb(196, 52, 0);
+}
+
+#key-equal {
+    background-color: cornflowerblue;
+}
+
+#key-equal:hover {
+    background-color: rgb(88, 129, 206);
+}
+
+#key-equal:active {
+    background-color: rgb(79, 117, 187);
+}
+
+hr {
+    margin: 0;
+    border: 1px solid rgb(46, 46, 46);
 }
 
 #calculator-body {
     height: 550px;
     width: 450px;
-    /* border: 2px solid black; */
+    border: 2px solid rgb(46, 46, 46);
+    border-radius: 20px;
     flex-direction: column;
     margin-top: 30px;
+    background-color: rgb(169, 168, 179);
 }
 
 #screen {
     flex-direction: column;
     margin: 20px;
-    /* gap: 10px; */
+    border: 2px solid rgb(46, 46, 46);
+    border-radius: 6px;
+    background-color: aliceblue;
 }
 
 #last-operation {
@@ -46,23 +96,25 @@ button {
     margin: 20px;
     gap: 10px;
     height: calc(100% - 106px);
-    padding: 5px;
+    padding: 10px;
+    background-color: rgb(87, 87, 100);
 }
 
 .grid-container {
     display: grid;
     gap: 5px;
+    background-color: rgb(150, 150, 150);
 }
 
 #numpad.grid-container{
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 80px 80px 80px;
     grid-template-rows: auto auto auto auto;
     width: 260px;
     padding: 5px;
 }
 
 #operators.grid-container{
-    grid-template-columns: auto auto;
+    grid-template-columns: 53px 53px;
     grid-template-rows: auto auto auto auto auto;
     width: calc(100% - 260px);
     padding: 5px;
