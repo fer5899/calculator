@@ -1,0 +1,76 @@
+body {
+    box-sizing: border-box;
+    font-family: roboto, sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    display: flex;
+    border: 1px dotted black; /* for positioning */
+}
+
+button {
+    display: block;
+}
+
+#calculator-body {
+    height: 550px;
+    width: 450px;
+    /* border: 2px solid black; */
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#screen {
+    flex-direction: column;
+    margin: 20px;
+    /* gap: 10px; */
+}
+
+#last-operation {
+    display: block;
+    text-align: right;
+    padding: 10px;
+}
+
+#result {
+    font-size: 1.6em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+}
+
+#keys {
+    margin: 20px;
+    gap: 10px;
+}
+
+#numpad {
+    flex-direction: column;
+    flex-grow: 1;
+    width: 260px;
+}
+
+#operators {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#operator-row {
+    
+}
+
+#numpad button {
+    flex-grow: 1;
+}
+
+
+
+
+
+
+
+
+
