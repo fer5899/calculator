@@ -24,3 +24,6 @@ function pow(a, b) {
     return Math.pow(a, b);
 }
 
+function operate(operation, a, b) {
+    return operation(a, b);
+}
