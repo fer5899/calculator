@@ -27,3 +27,8 @@ function pow(a, b) {
 function operate(operation, a, b) {
     return operation(a, b);
 }
+
+function addDigit(operand, newDigit) {
+    let extendedOperand = operand * 10;
+    return extendedOperand + newDigit;
+}

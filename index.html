@@ -4,8 +4,9 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./gridPositions.css">
     <link rel="icon" href="./img/calculator_favicon.png">
-    <script src="./events.js" defer></script>
+    <script src="./variables.js" defer></script>
     <script src="./functions.js" defer></script>
+    <script src="./events.js" defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,25 +17,25 @@
 
     <div id="calculator-body">
         <div id="screen">
-            <div id="last-operation">3842 + 4145426 =</div>
-            <div id="result">49629946</div>
+            <div id="last-operation"></div>
+            <div id="result">0</div>
         </div>
 
         <hr>
 
         <div id="keys">
             <div id="numpad" class="grid-container">
-                <button id="key-7" class="grid-item">7</button>
-                <button id="key-8" class="grid-item">8</button>
-                <button id="key-9" class="grid-item">9</button>
-                <button id="key-4" class="grid-item">4</button>
-                <button id="key-5" class="grid-item">5</button>
-                <button id="key-6" class="grid-item">6</button>
-                <button id="key-1" class="grid-item">1</button>
-                <button id="key-2" class="grid-item">2</button>
-                <button id="key-3" class="grid-item">3</button>
+                <button id="key-0" class="grid-item number">0</button>
+                <button id="key-1" class="grid-item number">1</button>
+                <button id="key-2" class="grid-item number">2</button>
+                <button id="key-3" class="grid-item number">3</button>
+                <button id="key-4" class="grid-item number">4</button>
+                <button id="key-5" class="grid-item number">5</button>
+                <button id="key-6" class="grid-item number">6</button>
+                <button id="key-7" class="grid-item number">7</button>
+                <button id="key-8" class="grid-item number">8</button>
+                <button id="key-9" class="grid-item number">9</button>
                 <button id="key-neg" class="grid-item">+/-</button>
-                <button id="key-0" class="grid-item">0</button>
                 <button id="key-dot" class="grid-item">.</button>
             </div>
 
