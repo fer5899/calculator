@@ -120,6 +120,10 @@ hr {
     padding: 5px;
 }
 
+div #key-div, div #key-subs, div #key-sum {
+    font-size: 1.2em;
+}
+
 
 
 
