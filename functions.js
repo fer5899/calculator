@@ -1,31 +1,37 @@
 function add(a, b) {
-    return [a + b, `${a} + ${b} =`];
+    let result = a + b;
+    return [result, `${result} +`, "+"];
 }
 
 function substract(a, b) {
-    return [a - b, `${a} - ${b} =`];
+    let result = a - b;
+    return [result, `${result} -`, "-"];
 }
 
 function divide(numer, denom) {
     if(denom === 0) return "ERROR";
-    return [numer / denom, `${a} ÷ ${b} =`];
+    let result = numer / denom;
+    return [result, `${result} ÷`, "÷"];
 }
 
 function multiply(a, b) {
-    return [a * b, `${a} ✕ ${b} =`];
+    let result = a * b;
+    return [result, `${result} ✕`, "✕"];
 }
 
 function root(a, b) {
     if(a < 0 || b === 0) return "ERROR";
-    return [Math.pow(a, 1/b), `${b}√${a} =`];
+    let result = Math.pow(a, 1/b);
+    return [result, `()√${result}`, "√"];
 }
 
 function pow(a, b) {
-    return [Math.pow(a, b), `${a}^${b} =`];
+    let result = Math.pow(a, b);
+    return [result, `${result}^()`, "^"];
 }
 
-function operate(operation, a, b) {
-    return operation(a, b);
+function operate(operation, prevOperand, mainOperand) {
+    return operation(prevOperand, mainOperand);
 }
 
 function addDigit(operand, newDigit) {
