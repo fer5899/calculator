@@ -34,9 +34,9 @@ function operate(operation, prevOperand, mainOperand) {
     return operation(prevOperand, mainOperand);
 }
 
-function addDigit(operand, newDigit) {
-    let extendedOperand = operand * 10;
-    return extendedOperand + newDigit;
+function addDigit(newDigit) {
+    screenResult.textContent += newDigit.toString();
+    return parseFloat(screenResult.textContent);
 }
 
 function removeDigit(operand) {
@@ -72,7 +72,7 @@ function printOperation(operation, prevOperand, mainOperand) {
 }
 
 function clearVariables() {
-    mainOperand = 0;
+    mainOperand = undefined;
     prevOperand = undefined;
     operation = undefined;
 }

@@ -1,8 +1,7 @@
 numberButtons.forEach(button => {
     button.addEventListener("click", e => {
         if(typeof operation === "undefined") screenLastOp.textContent = "";
-        mainOperand = addDigit(mainOperand, parseInt(e.target.textContent));
-        screenResult.textContent = mainOperand;
+        mainOperand = addDigit(e.target.textContent);
     });
 });
 
@@ -12,6 +11,8 @@ operatorButtons.forEach(button => {
         let operationResult = [];
         let result;
         let lastOperationText;
+
+        if(typeof mainOperand === "undefined") {mainOperand = 0;}
         
         if(typeof prevOperation !== "undefined") {
             operationResult = operate(prevOperation, prevOperand, mainOperand);
@@ -56,7 +57,7 @@ operatorButtons.forEach(button => {
             prevOperand = mainOperand;
         }
 
-        mainOperand = 0;
+        mainOperand = undefined;
 
         screenLastOp.textContent = lastOperationText;
         screenResult.textContent = mainOperand;
@@ -76,12 +77,19 @@ delButton.addEventListener("click", () => {
 });
 
 equalButton.addEventListener("click", () => {
-    if (typeof operation === "undefined") return;
+    if (typeof operation === "undefined" || typeof prevOperand === "undefined"
+        || typeof mainOperand === "undefined") return;
     screenLastOp.textContent = printOperation(operation, 
         prevOperand, mainOperand);
     mainOperand = operate(operation,prevOperand,mainOperand)[0];
     screenResult.textContent = mainOperand;
     clearVariables();
 });
+
+dotButton.addEventListener("click", () => {
+    if (!screenResult.textContent.includes(".")) {
+        screenResult.textContent += ".";
+    }
+})
 
 
