@@ -70,3 +70,8 @@ acButton.addEventListener("click", e => {
     screenLastOp.textContent = "";
     screenResult.textContent = mainOperand;
 });
+
+delButton.addEventListener("click", e => {
+    mainOperand = removeDigit(mainOperand);
+    screenResult.textContent = mainOperand;
+});

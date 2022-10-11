@@ -38,3 +38,7 @@ function addDigit(operand, newDigit) {
     let extendedOperand = operand * 10;
     return extendedOperand + newDigit;
 }
+
+function removeDigit(operand) {
+    return Math.trunc(operand/10);
+}
