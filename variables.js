@@ -10,3 +10,4 @@ const acButton = document.querySelector("#key-ac");
 const delButton = document.querySelector("#key-del");
 const equalButton = document.querySelector("#key-equal");
 const dotButton = document.querySelector("#key-dot");
+const negButton = document.querySelector("#key-neg");

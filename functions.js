@@ -76,3 +76,7 @@ function clearVariables() {
     prevOperand = undefined;
     operation = undefined;
 }
+
+function updateResult() {
+    screenResult.textContent = mainOperand;
+}

@@ -60,7 +60,7 @@ operatorButtons.forEach(button => {
         mainOperand = undefined;
 
         screenLastOp.textContent = lastOperationText;
-        screenResult.textContent = mainOperand;
+        updateResult();
             
     });
 });
@@ -68,12 +68,12 @@ operatorButtons.forEach(button => {
 acButton.addEventListener("click", () => {
     clearVariables();
     screenLastOp.textContent = "";
-    screenResult.textContent = mainOperand;
+    updateResult();
 });
 
 delButton.addEventListener("click", () => {
     mainOperand = removeDigit(mainOperand);
-    screenResult.textContent = mainOperand;
+    updateResult();
 });
 
 equalButton.addEventListener("click", () => {
@@ -82,7 +82,7 @@ equalButton.addEventListener("click", () => {
     screenLastOp.textContent = printOperation(operation, 
         prevOperand, mainOperand);
     mainOperand = operate(operation,prevOperand,mainOperand)[0];
-    screenResult.textContent = mainOperand;
+    updateResult();
     clearVariables();
 });
 
@@ -90,6 +90,11 @@ dotButton.addEventListener("click", () => {
     if (!screenResult.textContent.includes(".")) {
         screenResult.textContent += ".";
     }
-})
+});
+
+negButton.addEventListener("click", () => {
+    mainOperand = -mainOperand;
+    updateResult();
+});
 
 
