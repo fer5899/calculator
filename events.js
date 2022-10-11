@@ -63,4 +63,10 @@ operatorButtons.forEach(button => {
     });
 });
 
-
+acButton.addEventListener("click", e => {
+    mainOperand = 0;
+    prevOperand = undefined;
+    operation = undefined;
+    screenLastOp.textContent = "";
+    screenResult.textContent = mainOperand;
+});
