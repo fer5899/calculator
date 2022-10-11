@@ -93,6 +93,7 @@ dotButton.addEventListener("click", () => {
 });
 
 negButton.addEventListener("click", () => {
+    if(typeof mainOperand === "undefined") return;
     mainOperand = -mainOperand;
     updateResult();
 });
