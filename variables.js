@@ -8,3 +8,4 @@ const screenResult = document.querySelector("div#result");
 const screenLastOp = document.querySelector("div#last-operation");
 const acButton = document.querySelector("#key-ac");
 const delButton = document.querySelector("#key-del");
+const equalButton = document.querySelector("#key-equal");

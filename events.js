@@ -1,5 +1,6 @@
 numberButtons.forEach(button => {
     button.addEventListener("click", e => {
+        if(typeof operation === "undefined") screenLastOp.textContent = "";
         mainOperand = addDigit(mainOperand, parseInt(e.target.textContent));
         screenResult.textContent = mainOperand;
     });
@@ -63,15 +64,24 @@ operatorButtons.forEach(button => {
     });
 });
 
-acButton.addEventListener("click", e => {
-    mainOperand = 0;
-    prevOperand = undefined;
-    operation = undefined;
+acButton.addEventListener("click", () => {
+    clearVariables();
     screenLastOp.textContent = "";
     screenResult.textContent = mainOperand;
 });
 
-delButton.addEventListener("click", e => {
+delButton.addEventListener("click", () => {
     mainOperand = removeDigit(mainOperand);
     screenResult.textContent = mainOperand;
 });
+
+equalButton.addEventListener("click", () => {
+    if (typeof operation === "undefined") return;
+    screenLastOp.textContent = printOperation(operation, 
+        prevOperand, mainOperand);
+    mainOperand = operate(operation,prevOperand,mainOperand)[0];
+    screenResult.textContent = mainOperand;
+    clearVariables();
+});
+
+
