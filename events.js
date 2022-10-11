@@ -16,6 +16,10 @@ operatorButtons.forEach(button => {
         
         if(typeof prevOperation !== "undefined") {
             operationResult = operate(prevOperation, prevOperand, mainOperand);
+            if(operationResult[0] === "E") {
+                equal();
+                return;
+            }
             mainOperand = operationResult[0];
             prevOperand = operationResult[0];
         } 
@@ -79,11 +83,7 @@ delButton.addEventListener("click", () => {
 equalButton.addEventListener("click", () => {
     if (typeof operation === "undefined" || typeof prevOperand === "undefined"
         || typeof mainOperand === "undefined") return;
-    screenLastOp.textContent = printOperation(operation, 
-        prevOperand, mainOperand);
-    mainOperand = operate(operation,prevOperand,mainOperand)[0];
-    updateResult();
-    clearVariables();
+    equal();
 });
 
 dotButton.addEventListener("click", () => {

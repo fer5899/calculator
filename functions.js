@@ -9,7 +9,7 @@ function substract(a, b) {
 }
 
 function divide(numer, denom) {
-    if(denom === 0) return "ERROR";
+    if(denom === 0) {return "ERROR";}
     let result = numer / denom;
     return [result, `${result} ÷`, "÷"];
 }
@@ -20,7 +20,7 @@ function multiply(a, b) {
 }
 
 function root(a, b) {
-    if(a < 0 || b === 0) return "ERROR";
+    if(a < 0 || b === 0) {return "ERROR";}
     let result = Math.pow(a, 1/b);
     return [result, `()√${result}`, "√"];
 }
@@ -79,4 +79,12 @@ function clearVariables() {
 
 function updateResult() {
     screenResult.textContent = mainOperand;
+}
+
+function equal() {
+    screenLastOp.textContent = printOperation(operation, 
+        prevOperand, mainOperand);
+    mainOperand = operate(operation,prevOperand,mainOperand)[0];
+    updateResult();
+    clearVariables();
 }
