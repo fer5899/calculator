@@ -1,4 +1,4 @@
-const MAX_DIGITS_ON_SCREEN = 15;
+const MAX_DIGITS_ON_SCREEN = 15; // With 16 digits there's unwanted rounding
 
 let mainOperand = 0;
 let prevOperand;
