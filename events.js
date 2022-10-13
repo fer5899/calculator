@@ -1,7 +1,7 @@
 numberButtons.forEach(button => {
     button.addEventListener("click", e => {
         if(typeof operation === "undefined") screenLastOp.textContent = "";
-        mainOperand = addDigit(e.target.textContent);
+        addDigit(e.target.textContent);
     });
 });
 
@@ -77,8 +77,7 @@ acButton.addEventListener("click", () => {
 
 delButton.addEventListener("click", () => {
     if (typeof mainOperand === "undefined") return;
-    mainOperand = removeDigit(mainOperand);
-    updateResult();
+    removeDigit(screenResult);
 });
 
 equalButton.addEventListener("click", () => {

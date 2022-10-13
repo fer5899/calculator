@@ -35,12 +35,15 @@ function operate(operation, prevOperand, mainOperand) {
 }
 
 function addDigit(newDigit) {
-    screenResult.textContent += newDigit.toString();
-    return parseFloat(screenResult.textContent);
+    if (screenResult.textContent.length < MAX_DIGITS_ON_SCREEN) {
+        screenResult.textContent += newDigit.toString();
+        mainOperand = parseFloat(screenResult.textContent);
+    }
 }
 
 function removeDigit(operand) {
-    return Math.trunc(operand/10);
+    operand.textContent = operand.textContent.slice(0,-1);
+    mainOperand = parseFloat(operand.textContent);
 }
 
 function printOperation(operation, prevOperand, mainOperand) {
