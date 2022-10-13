@@ -1,6 +1,7 @@
 numberButtons.forEach(button => {
     button.addEventListener("click", e => {
         if(typeof operation === "undefined") screenLastOp.textContent = "";
+        if(typeof mainOperand === "undefined") screenResult.textContent = "";
         addDigit(e.target.textContent);
     });
 });
