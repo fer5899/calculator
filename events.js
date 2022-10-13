@@ -76,6 +76,7 @@ acButton.addEventListener("click", () => {
 });
 
 delButton.addEventListener("click", () => {
+    if (typeof mainOperand === "undefined") return;
     mainOperand = removeDigit(mainOperand);
     updateResult();
 });
