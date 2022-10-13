@@ -1,4 +1,4 @@
-const MAX_DIGITS_ON_SCREEN = 18;
+const MAX_DIGITS_ON_SCREEN = 15;
 
 let mainOperand = 0;
 let prevOperand;
